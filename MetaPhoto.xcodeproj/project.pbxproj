@@ -16,19 +16,8 @@
 		C4974F931A1F76000028D753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4974F911A1F76000028D753 /* Main.storyboard */; };
 		C4974F951A1F76000028D753 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4974F941A1F76000028D753 /* Images.xcassets */; };
 		C4974F981A1F76000028D753 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4974F961A1F76000028D753 /* LaunchScreen.xib */; };
-		C4974FA41A1F76000028D753 /* MetaPhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4974FA31A1F76000028D753 /* MetaPhotoTests.swift */; };
 		C4974FAE1A1F76AD0028D753 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4974FAD1A1F76AD0028D753 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C4974F9E1A1F76000028D753 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4974F7E1A1F76000028D753 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C4974F851A1F76000028D753;
-			remoteInfo = MetaPhoto;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C454C4061A227130003CC065 /* DetailBoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBoolCell.swift; sourceTree = "<group>"; };
@@ -42,21 +31,11 @@
 		C4974F921A1F76000028D753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4974F941A1F76000028D753 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C4974F971A1F76000028D753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C4974F9D1A1F76000028D753 /* MetaPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetaPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4974FA21A1F76000028D753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4974FA31A1F76000028D753 /* MetaPhotoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaPhotoTests.swift; sourceTree = "<group>"; };
 		C4974FAD1A1F76AD0028D753 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C4974F831A1F76000028D753 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4974F9A1A1F76000028D753 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				C4974F881A1F76000028D753 /* MetaPhoto */,
-				C4974FA01A1F76000028D753 /* MetaPhotoTests */,
 				C4974F871A1F76000028D753 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				C4974F861A1F76000028D753 /* MetaPhoto.app */,
-				C4974F9D1A1F76000028D753 /* MetaPhotoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,23 +87,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C4974FA01A1F76000028D753 /* MetaPhotoTests */ = {
-			isa = PBXGroup;
-			children = (
-				C4974FA31A1F76000028D753 /* MetaPhotoTests.swift */,
-				C4974FA11A1F76000028D753 /* Supporting Files */,
-			);
-			path = MetaPhotoTests;
-			sourceTree = "<group>";
-		};
-		C4974FA11A1F76000028D753 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C4974FA21A1F76000028D753 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,24 +107,6 @@
 			productReference = C4974F861A1F76000028D753 /* MetaPhoto.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C4974F9C1A1F76000028D753 /* MetaPhotoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C4974FAA1A1F76000028D753 /* Build configuration list for PBXNativeTarget "MetaPhotoTests" */;
-			buildPhases = (
-				C4974F991A1F76000028D753 /* Sources */,
-				C4974F9A1A1F76000028D753 /* Frameworks */,
-				C4974F9B1A1F76000028D753 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C4974F9F1A1F76000028D753 /* PBXTargetDependency */,
-			);
-			name = MetaPhotoTests;
-			productName = MetaPhotoTests;
-			productReference = C4974F9D1A1F76000028D753 /* MetaPhotoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,10 +118,6 @@
 				TargetAttributes = {
 					C4974F851A1F76000028D753 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					C4974F9C1A1F76000028D753 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = C4974F851A1F76000028D753;
 					};
 				};
 			};
@@ -197,7 +135,6 @@
 			projectRoot = "";
 			targets = (
 				C4974F851A1F76000028D753 /* MetaPhoto */,
-				C4974F9C1A1F76000028D753 /* MetaPhotoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -210,13 +147,6 @@
 				C4974F931A1F76000028D753 /* Main.storyboard in Resources */,
 				C4974F981A1F76000028D753 /* LaunchScreen.xib in Resources */,
 				C4974F951A1F76000028D753 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4974F9B1A1F76000028D753 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,23 +167,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4974F991A1F76000028D753 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4974FA41A1F76000028D753 /* MetaPhotoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C4974F9F1A1F76000028D753 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C4974F851A1F76000028D753 /* MetaPhoto */;
-			targetProxy = C4974F9E1A1F76000028D753 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C4974F911A1F76000028D753 /* Main.storyboard */ = {
@@ -374,40 +288,6 @@
 			};
 			name = Release;
 		};
-		C4974FAB1A1F76000028D753 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MetaPhotoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetaPhoto.app/MetaPhoto";
-			};
-			name = Debug;
-		};
-		C4974FAC1A1F76000028D753 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MetaPhotoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetaPhoto.app/MetaPhoto";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,15 +305,6 @@
 			buildConfigurations = (
 				C4974FA81A1F76000028D753 /* Debug */,
 				C4974FA91A1F76000028D753 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C4974FAA1A1F76000028D753 /* Build configuration list for PBXNativeTarget "MetaPhotoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C4974FAB1A1F76000028D753 /* Debug */,
-				C4974FAC1A1F76000028D753 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
