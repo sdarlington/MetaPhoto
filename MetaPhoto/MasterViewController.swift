@@ -15,17 +15,35 @@ class MasterViewController: UICollectionViewController {
     
     var photos : PHFetchResult!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func viewWillAppear(animated:Bool) {
+        super.viewWillAppear(animated)
+        
+        if let x = self.photos {
+            // we don't need to go through this if we have a valid PHFetchResult object
+            return
+        }
 
-        // TODO: should check permissions before accessing photo library
-        let options =  PHFetchOptions()
-        self.photos =  PHAsset.fetchAssetsWithMediaType(.Image, options: options)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+        PHPhotoLibrary.requestAuthorization() {
+            status in
+            
+            switch (status) {
+            case .Authorized:
+                let options =  PHFetchOptions()
+                self.photos =  PHAsset.fetchAssetsWithMediaType(.Image, options: options)
+                
+                self.collectionView.reloadData()
+            default:
+                var errorDialog = UIAlertController(title:"Permissions", message:"You don't have permissions to view the photo library", preferredStyle:.Alert)
+                errorDialog.addAction(UIAlertAction(title:"Cancel", style:.Cancel, handler:nil))
+                errorDialog.addAction(UIAlertAction(title:"Open settings", style:.Default, handler:{
+                    action in
+                    UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
+                    return
+                }))
+                
+                self.presentViewController(errorDialog, animated:true, completion:nil)
+            }
+        }
     }
 
     // MARK: - Segues
@@ -45,7 +63,12 @@ class MasterViewController: UICollectionViewController {
     // MARK: - Collection View
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        if let photos = self.photos {
+            return 1
+        }
+        else {
+            return 0
+        }
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
