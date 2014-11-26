@@ -95,7 +95,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        if let detail = self.detailItem {
+            return 1
+        }
+        else {
+            return 0
+        }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
